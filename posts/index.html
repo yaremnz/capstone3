@@ -26,18 +26,27 @@
     <script>
         if (isLoggedIn() === false) window.location.replace("/");
     </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+    </style>
 </head>
 <body>
 
     <header>
         <h1>POSTS PAGE</h1>
+        <
     </header>
-
-    <main></main>
+    <div id="newPostForm">
+        <input type="text" id="messageElement" placeholder="Enter Message">
+        <button id="buttonPostMessage">Post message</button>
+    </div>
+    <main>
+        <div id="messagesOutput">?</div>
+    </main>
 
     <footer></footer>
 
-    <!-- Page-specific code -->
+
     <script src="./posts.js"></script>
 </body>
 </html>
