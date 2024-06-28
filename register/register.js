@@ -1,4 +1,6 @@
-function register(data){
+
+
+function register(){
     
     return fetch(apiBaseURL + "/api/users",{ 
         method: "POST",
@@ -8,7 +10,7 @@ function register(data){
 
         },
         body: JSON.stringify({
-            username: userName.value,
+            username: username.value,
             fullName: fullName.value,
             password: password.value 
         }),

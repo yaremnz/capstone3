@@ -32,8 +32,9 @@ function login (loginData) {
             return;
         }
         errorMessage.innerHTML = "";
-        window.localStorage.setItem("login=data", JSON.stringify(loginData));
+        window.localStorage.setItem("login-data", JSON.stringify(loginData));
         window.localStorage.token = loginData.token;
+        window.localStorage.username = loginData.username;
         window.location.assign("/posts");
         return loginData;
     });
@@ -43,9 +44,9 @@ function login (loginData) {
 function logout () {
         fetch(apiBaseURL + "/auth/logout", { 
         method: "GET",
-        headers: { Authorization: `Bearer ${loginData.token}`},
+        headers: { Authorization: `Bearer ${localStorage.token}`},
     }).then(() => {
-        window.localStorage.remove("token");
+        window.localStorage.removeItem("token");
         location = "/";
     });
 }

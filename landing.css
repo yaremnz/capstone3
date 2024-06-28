@@ -1,1 +1,70 @@
-/* Landing Page CSS */
+
+#login{
+    background: transparent;
+    border: 15px solid rgba(255, 26, 205, 0.35);
+    backdrop-filter: blur(10px);
+    width: 300px;
+    text-align: center;
+    margin-left: 25%;
+    color:rgb(222, 90, 255);
+    text-shadow: 0.5px 0.5px rgb(109, 255, 64);
+    font-size: 20px;
+    
+}
+p{
+    color: white;
+
+}
+.carousel img{
+    margin: auto;
+    border: 15px groove rgb(76, 223, 243);
+}
+/* #pg{    
+    margin-right: 1000px;  
+} */
+* {
+    box-sizing: border-box;
+  }
+.column {
+    float: left;
+    padding: 10px;
+    height: 300px; 
+    margin-top: 8%;
+  }
+  
+  .left {
+    width: 50%;
+  }
+  
+  .right {
+    width: 50%;
+  }
+  
+.carousel-item {
+    overflow: hidden;
+}
+
+.overlay-text {
+    position: absolute;
+    margin-left: -45px;
+    width: 50%; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -40%);
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #36e1ff;
+    padding: 10px;
+    opacity: 0;
+    text-align: center;
+    box-sizing: border-box;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    transition: opacity 0.s ease;
+    text-overflow: ellipsis;
+    font-size: 25px;
+}
+
+.carousel-item:hover .overlay-text {
+    opacity: 4;
+}
+

@@ -1,32 +1,37 @@
 /* Posts Page JavaScript */
 
 "use strict";
-buttonPostMessage.addEventListener("click", e=>{
-    fetch(apiBaseURL + "/api/posts:",{
+document.getElementById("buttonPostMessage").addEventListener("click", e => {
+    fetch(apiBaseURL + "/api/posts", {
         method: "POST",
-        node: "cors",
+        mode: "cors",
+        cache: "no-cache",
         credentials: "same-origin",
-        header: {
+        headers: {
             accept: "application/json",
-            "Content-Type" : "application/json",
+            "Content-Type": "application/json",
             Authorization: "Bearer " + localStorage.token
         },
-        body: JSON.stringify({
-            text: messageElement.value
-        })
-    }).then(response =>{
-        debugger;
-        console.log(response);
-        location = "/post/";
+        body: JSON.stringify({ text: document.getElementById("messageElement").value })
+    }).then(response => {
+        if (response.ok) {
+            console.log("Post created");
+            location.reload();  // force refresh
+        } else {
+            console.error("Failed to create post:", response.statusText);
+        }
+    }).catch(error => {
+        console.error("Error creating post:", error);
     });
 });
 
 function getMessage(message){
     return `
-    <div>
+    <div class="posts">
         <h1>${message.text}</h1>
         <div class="username">${message.username}</div>
-    </div>
+        <div class="createdAt">${message.createdAt}</div>
+    </div> <hr>
     `;
 }
 function showMessages(messages){
@@ -35,7 +40,7 @@ function showMessages(messages){
         return;
     }
 
-    messagesOutput.innerHTML = messages.map(getMessage).join("")
+    messagesOutput.innerHTML = messages.map(getMessage).join("");
 }
 fetch(apiBaseURL + "/api/posts", {
     method: "GET",

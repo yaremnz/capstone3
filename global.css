@@ -1,12 +1,48 @@
 /* Global CSS for all pages */
 
-* {
-    box-sizing: border-box;
+.mainheader{
+    color: rgb(255, 115, 243);
+    font-size: 70px;
+    text-align: center;
+    text-shadow: 2px 2px #00fc2a;
 }
+
 
 :root {
     font-size: 1rem;
 }
 body{
     background-image: url(./images/bkgd.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: auto;
+    height: 100vh;
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+header{
+    align-items: center;
+    /* background-color: white; */
+    color:rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+}
+
+.nav-link {
+    margin: 10px;
+    text-decoration: none;
+    color: aquamarine;
+    text-shadow: 2px 2px rgb(197, 52, 255);
+    font-size: 40px;
+}
+a.nav-link:hover {
+    color: rgb(255, 83, 218);
+}
+.logoutbtn{
+    color: red;
+    font-size: 20px;
+    text-decoration: none;
 }
