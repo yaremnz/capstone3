@@ -29,3 +29,7 @@
     padding: 10px;
     /* text-wrap: ; */
 }
+.username{
+    color:fuchsia;
+    font-size: 35px;
+}
