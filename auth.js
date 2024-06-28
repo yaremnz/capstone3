@@ -35,7 +35,7 @@ function login (loginData) {
         window.localStorage.setItem("login-data", JSON.stringify(loginData));
         window.localStorage.token = loginData.token;
         window.localStorage.username = loginData.username;
-        window.location.assign("/posts");
+        window.location.assign("./posts/");
         return loginData;
     });
 }
@@ -47,6 +47,6 @@ function logout () {
         headers: { Authorization: `Bearer ${localStorage.token}`},
     }).then(() => {
         window.localStorage.removeItem("token");
-        location = "/";
+        location = "../logout";
     });
 }
