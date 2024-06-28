@@ -2,7 +2,7 @@
     max-width: 15%;
     margin: auto;
     text-align: center;
-    background-color: rgb(255, 149, 149);
+    background-color: rgb(255, 104, 230);
 }
 #bioInput{
     width: 100%;
@@ -18,3 +18,18 @@
     color: rgb(177, 45, 182);
     font-size: 25px;
 }
+.row{
+    width: 50%;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.row img{
+    width: 90px;
+    margin: auto;
+}
+.row img:hover  {
+    background-color: rgb(39, 248, 255);
+    border-radius: 5rem;
+    box-shadow: 3px 3px rgb(250, 47, 240);
+  }
