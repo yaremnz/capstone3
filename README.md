@@ -6,13 +6,19 @@ Practice and experimentation provide experience, and experience provides confide
 
 ##Log-in
 Using bootstrap I made a functioning carsouel. On this page you cannt access the post or profile page wihtout logging in!
+<img alt="Log-in Page" width="50%" src="/images/login1.PNG">
+<img alt="Log-in Page 2" width="50%" src="./images/login2.PNG">
 
 ##Register
 Using the POST method I am able to create(register) a new profile. 
-
+<img alt="Register Page 1" width="50%" src="./images/register1.PNG">
+<img alt="Register Page 2" width="50%" src="./images/register2.PNG">
 
 ##Posts
 Once you are logged in you are able to see the post page. Here we can see everyone else's posts. I wanted to keep the posts organized in a liner way, so I didnt try to put them side by side. 
+<img alt="Posts Page" width="100%" src="./images/posts.PNG">
 
 ##My-Profile
 This page is only able to be accessed when you are logged in. In the javascript i added -usernameElement.textContent = data.username;- in -function showProfile(data)-, so that which ever account is logged in, the username is displayed.  
+<img alt="Profile Page 1" width="50%" src="./images/profile1.PNG">
+<img alt="Profile Page 2" width="50%" src="./images/profile2.PNG">
