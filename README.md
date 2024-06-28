@@ -7,7 +7,7 @@ Practice and experimentation provide experience, and experience provides confide
 ##Log-in
 Using bootstrap I made a functioning carsouel. On this page you cannt access the post or profile page wihtout logging in!
 
-<img alt="Log-in Page" width="40%" src="/images/login1.PNG">
+<img alt="Log-in Page" width="40%" src="./images/login1.PNG">
 <img alt="Log-in Page 2" width="40%" src="./images/login2.PNG">
 
 ##Register
