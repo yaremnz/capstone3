@@ -16,7 +16,9 @@ Using the POST method I am able to create(register) a new profile.
 
 ##Posts
 Once you are logged in you are able to see the post page. Here we can see everyone else's posts. I wanted to keep the posts organized in a liner way, so I didnt try to put them side by side. 
-<img alt="Posts Page" width="100%" src="./images/posts.PNG">
+<img alt="Posts Page" width="45%" src="./images/posts.PNG">
+<img alt="Posts Page" width="45%" src="./images/posts2.PNG">
+
 
 ##My-Profile
 This page is only able to be accessed when you are logged in. In the javascript i added -usernameElement.textContent = data.username;- in -function showProfile(data)-, so that which ever account is logged in, the username is displayed.  
