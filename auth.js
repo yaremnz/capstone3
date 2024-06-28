@@ -2,7 +2,7 @@
 
 "use strict";
 
-const apiBaseURL = "https://microbloglite.us-east-2.elasticbeanstalk.com";
+const apiBaseURL = "http://microbloglite.us-east-2.elasticbeanstalk.com";
 // Backup server (mirror):   "https://microbloglite.onrender.com"
 
 // NOTE: API documentation is available at /docs 
@@ -35,7 +35,7 @@ function login (loginData) {
         window.localStorage.setItem("login-data", JSON.stringify(loginData));
         window.localStorage.token = loginData.token;
         window.localStorage.username = loginData.username;
-        window.location.assign("./posts/");
+        window.location.assign("/posts");
         return loginData;
     });
 }
@@ -47,6 +47,6 @@ function logout () {
         headers: { Authorization: `Bearer ${localStorage.token}`},
     }).then(() => {
         window.localStorage.removeItem("token");
-        location = "../logout";
+        location = "/";
     });
 }
